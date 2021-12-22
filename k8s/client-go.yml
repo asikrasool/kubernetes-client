@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: client-go
+  name: client-go
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client-go
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: client-go
+    spec:
+      containers:
+      - image: asikrasool/client-go:0.1
+        name: client-go
